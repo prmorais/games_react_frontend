@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Paulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Paulo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Games/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Games/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/apiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/apiConfig.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <updated>1600878858757</updated>
       <workItem from="1600878862034" duration="7354000" />
       <workItem from="1600896097373" duration="4825000" />
-      <workItem from="1600952886991" duration="6572000" />
+      <workItem from="1600952886991" duration="11738000" />
     </task>
     <servers />
   </component>

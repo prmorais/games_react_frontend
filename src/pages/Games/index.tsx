@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Table} from "react-bootstrap";
+import {Table, Button} from "react-bootstrap";
 import apiConfig from "../../services/apiConfig";
 
 interface Game {
@@ -30,16 +30,22 @@ const [games, setGames] = useState<Game[]>([]);
                 <th>#</th>
                 <th>Título</th>
                 <th>Plataforma</th>
+                <th>ações</th>
             </tr>
             </thead>
             <tbody>
-            { games.map(game => (
-                <tr key={ game.id }>
-                    <td>{ game.id }</td>
-                    <td>{ game.title }</td>
-                    <td>{ game.platform }</td>
-                </tr>
-            ))};
+                { games.map(game =>  (
+                    <tr key={game.id}>
+                        <td>{game.id}</td>
+                        <td>{game.title}</td>
+                        <td>{game.platform}</td>
+                        <td>
+                            <Button size='sm' variant='outline-primary'>Editar</Button>{' '}
+                            <Button size='sm' variant='outline-info'>Visualizar</Button>{' '}
+                            <Button size='sm' variant='outline-danger'>Visualizar</Button>
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </Table>
     </div>
