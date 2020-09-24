@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {Table, Button} from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+
+import './index.css';
+
 import apiConfig from "../../services/apiConfig";
 
 interface Game {
@@ -10,31 +14,42 @@ interface Game {
 
 const Games: React.FC = () => {
 
-async function loadGames() {
-    const response = await apiConfig.get('/games');
-    setGames(response.data);
-}
+
 const [games, setGames] = useState<Game[]>([]);
+const history = useHistory();
 
     useEffect(() => {
         loadGames();
     }, []);
 
-    return <div className='container'>
-        <h1>Games Page</h1>
-        <br/>
+    async function loadGames() {
+        const response = await apiConfig.get('/games');
+        setGames(response.data);
+    }
 
-        <Table striped bordered hover className='text-center'>
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Título</th>
-                <th>Plataforma</th>
-                <th>ações</th>
-            </tr>
-            </thead>
-            <tbody>
-                { games.map(game =>  (
+    function newGame() {
+        history.push('/games_cadastro');
+    }
+
+    return (
+        <div className='container'>
+            <br/>
+            <div className="game-header">
+                <h1>List Games</h1>
+                <Button size='sm' variant='outline-success' onClick={newGame}> Novo Game</Button>
+            </div>
+            <br/>
+            <Table striped bordered hover className='text-center'>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Título</th>
+                    <th>Plataforma</th>
+                    <th>ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                {games.map(game => (
                     <tr key={game.id}>
                         <td>{game.id}</td>
                         <td>{game.title}</td>
@@ -46,9 +61,10 @@ const [games, setGames] = useState<Game[]>([]);
                         </td>
                     </tr>
                 ))}
-            </tbody>
-        </Table>
-    </div>
+                </tbody>
+            </Table>
+        </div>
+    )
 };
 
 export default Games;
