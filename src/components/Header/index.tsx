@@ -1,15 +1,16 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import {Navbar, Nav} from "react-bootstrap";
 
 const Header: React.FC = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" variant='dark' expand="lg">
             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
+                    <Nav.Item as={Link} to={'/'} className='nav-link' >Início</Nav.Item>
+                    <Nav.Item as={Link} to={'/games'} className='nav-link'>Games</Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
