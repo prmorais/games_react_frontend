@@ -11,6 +11,7 @@ const Routes: React.FC = () => {
             <Route path='/' exact component={Home}/>
             <Route path='/games' exact component={Games}/>
             <Route path='/games_cadastro' exact component={FormGame}/>
+            <Route path='/games_cadastro/:id' exact component={FormGame}/>
         </Switch>
     )
 };
