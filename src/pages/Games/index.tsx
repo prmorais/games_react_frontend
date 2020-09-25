@@ -30,6 +30,10 @@ const history = useHistory();
     function newGame() {
         history.push('/games_cadastro');
     }
+    
+    function editGame(id: number) {
+        history.push(`/games_cadastro/${id}`)
+    }
 
     return (
         <div className='container'>
@@ -57,7 +61,7 @@ const history = useHistory();
                         <td>
                             <Button size='sm' variant='outline-primary'>Editar</Button>{' '}
                             <Button size='sm' variant='outline-info'>Visualizar</Button>{' '}
-                            <Button size='sm' variant='outline-danger'>Visualizar</Button>
+                            <Button size='sm' variant='outline-danger'>Excluir</Button>
                         </td>
                     </tr>
                 ))}
