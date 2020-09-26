@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa0509d-b8a7-4b71-ab08-068c3571c16b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Paulo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Paulo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Games/Form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Games/Form/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Games/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Games/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/apiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/apiConfig.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +121,10 @@
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1600887546438" />
     <state width="1869" height="271" key="GridCell.Tab.0.right/0.0.1366.738/-1920.-113.1920.1050@-1920.-113.1920.1050" timestamp="1600896863794" />
+    <state x="-1380" y="68" key="RollbackChangesDialog" timestamp="1601154214266">
+      <screen x="-1920" y="-113" width="1920" height="1050" />
+    </state>
+    <state x="-1380" y="68" key="RollbackChangesDialog/0.0.1366.738/-1920.-113.1920.1050@-1920.-113.1920.1050" timestamp="1601154214266" />
     <state x="-1459" y="-148" width="1358" height="883" key="SettingsEditor" timestamp="1600995579894">
       <screen x="-1920" y="-312" width="1920" height="1050" />
     </state>
@@ -132,5 +134,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1600884532360" />
+    <state x="-1381" y="-98" width="840" height="1034" key="search.everywhere.popup" timestamp="1601155667149">
+      <screen x="-1920" y="-113" width="1920" height="1050" />
+    </state>
+    <state x="-1381" y="-98" width="840" height="1034" key="search.everywhere.popup/0.0.1366.738/-1920.-113.1920.1050@-1920.-113.1920.1050" timestamp="1601155667149" />
   </component>
 </project>

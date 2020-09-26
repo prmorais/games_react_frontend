@@ -1,5 +1,5 @@
-import React, {ChangeEvent, useState} from "react";
-import {useHistory} from 'react-router-dom'
+import React, {ChangeEvent, useEffect, useState} from "react";
+import {useHistory, useParams} from 'react-router-dom'
 import {Button, Form} from "react-bootstrap";
 
 import './index.css'
@@ -12,12 +12,19 @@ interface Game {
 
 const FormGame: React.FC = () => {
 
+   const history = useHistory();
+   const {id} = useParams();
    const [model, setModel] = useState<Game>({
       title: '',
       platform: ''
    });
 
-   const history = useHistory();
+   useEffect(() => {
+      if (id !== undefined) {
+         findGame(id);
+      }
+   }, [id]);
+
 
    function updateModel(e: ChangeEvent<HTMLInputElement>) {
       setModel({
@@ -29,8 +36,21 @@ const FormGame: React.FC = () => {
    async function onSave(e: ChangeEvent<HTMLFormElement>) {
       e.preventDefault();
 
-      const response = await apiConfig.post('/games', model);
-      console.log(response);
+      if (id !== undefined) {
+         await apiConfig.put(`/games/${id}`, model);
+      } else {
+         await apiConfig.post('/games', model);
+      }
+
+      goBack();
+   }
+
+   async function findGame(id: string) {
+      const response = await apiConfig.get(`games/${id}`);
+      setModel({
+         title: response.data.title,
+         platform: response.data.platform
+      });
    }
 
    function goBack() {
@@ -52,6 +72,7 @@ const FormGame: React.FC = () => {
                   <Form.Control
                      type="text"
                      name='title'
+                     value={model.title}
                      onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
                      placeholder="Entre com o título"/>
                </Form.Group>
@@ -61,6 +82,7 @@ const FormGame: React.FC = () => {
                   <Form.Control
                      type="text"
                      name='platform'
+                     value={model.platform}
                      onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
                      placeholder="Entre com a plataforma"/>
                </Form.Group>

@@ -59,7 +59,12 @@ const history = useHistory();
                         <td>{game.title}</td>
                         <td>{game.platform}</td>
                         <td>
-                            <Button onClick={() => editGame(game.id)} size='sm' variant='outline-primary'>Editar</Button>{' '}
+                            <Button
+                               onClick={() => editGame(game.id)}
+                               size='sm'
+                               variant='outline-primary'>
+                                Editar
+                            </Button>{' '}
                             <Button size='sm' variant='outline-info'>Visualizar</Button>{' '}
                             <Button size='sm' variant='outline-danger'>Excluir</Button>
                         </td>
